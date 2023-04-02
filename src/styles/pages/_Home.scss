@@ -1,0 +1,8 @@
+.home-container {
+  width: 100vw;
+  height: 100vh;
+  &__location {
+    width: 50%;
+    height: fit-content;
+  }
+}
