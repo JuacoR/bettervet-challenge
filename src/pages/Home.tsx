@@ -1,13 +1,15 @@
 import React from 'react'
-import { LocationInputForm } from '../components/forms/LocationInputForm'
+import { ContainerLayout } from '../components/layout/ContainerLayout'
+import { HomeTemplate } from '../components/templates/HomeTemplate'
 
-export const Home = () => {
+
+export const Home = () => {    
+
   return (
-    <div className='home-container'>
-      <h1>Are you ready to search for you restaurant?</h1>
-      <div className='home-container__location'>
-        <LocationInputForm />
-      </div>
-    </div>
+    <main className='home-container'>
+      <ContainerLayout>
+        <HomeTemplate />
+      </ContainerLayout>
+    </main>
   )
 }

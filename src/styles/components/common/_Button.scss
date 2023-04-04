@@ -1,0 +1,17 @@
+.button-container {
+  width: fit-content;
+  min-width: 100px;
+  height: 30px;
+  border: none;
+  border-radius: 4px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  &:hover {
+    cursor: pointer;
+    opacity: 0.9;
+  }
+  &:focus {
+    outline: none;
+  }
+}

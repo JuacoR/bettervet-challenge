@@ -1,0 +1,14 @@
+@use '../../variables/' as v;
+
+.container-layout {
+  width: 80%;
+  min-height: 40%;
+  height: fit-content;
+  background-color: v.$color_layout; // add color in the vars styles
+  border-radius: 6px;
+  padding: 5rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+}

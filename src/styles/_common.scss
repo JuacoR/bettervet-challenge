@@ -1,7 +1,12 @@
+@use './variables/' as v;
 
+* {
+  margin: 0;
+  padding: 0  ;
+}
 
 body {
-  background-color: #0B2447;
+  background-color: v.$color_main;
   max-width: 100vw;
   overflow-x: hidden;
 }

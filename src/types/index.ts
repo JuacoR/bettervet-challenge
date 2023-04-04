@@ -1,1 +1,2 @@
-export * from './LocationInputType'
+export * from './location-input'
+export * from './coordinates'
