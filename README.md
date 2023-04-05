@@ -2,6 +2,10 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## API Links
+https://tintef.github.io/react-google-places-autocomplete/docs/get-lat-lng/
+https://rapidapi.com/apidojo/api/travel-advisor/
+
 ## Available Scripts
 
 In the project directory, you can run:

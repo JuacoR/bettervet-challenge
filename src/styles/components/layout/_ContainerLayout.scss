@@ -1,4 +1,6 @@
 @use '../../variables/' as v;
+@use '../../mixins/' as m;
+
 
 .container-layout {
   width: 80%;
@@ -11,4 +13,8 @@
   align-items: center;
   flex-direction: column;
   gap: 2rem;
+  @include m.media-small {
+    padding: 1rem;
+    margin: 1rem 0;
+  }
 }

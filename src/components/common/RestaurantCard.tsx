@@ -4,7 +4,6 @@ import { useNavigate } from 'react-router-dom'
 import { addRestaurant } from '../../redux/states/restaurant'
 import { Button } from './Button'
 
-
 interface RestaurantCardProps {
     resto: any,
 }
@@ -13,15 +12,15 @@ export const RestaurantCard = ({resto}:RestaurantCardProps) => {
   const dispatch = useDispatch()
   const navigate = useNavigate()
 
-  console.log(resto)
-
   const handleButtonSelectClick = () => {
     dispatch(addRestaurant({
       name: resto.name, 
       address: resto.address, 
-      image: resto.photo.images.large.url ? resto.photo.images.large.url : null,
-      type_restaurant: resto.category.name, 
-      reviews: resto.reviews
+      image: resto.photo ? resto.photo.images.large.url : null,
+      type_restaurant: resto.category.name,   
+      rating: resto.rating,
+      reviews: resto.reviews[0] === null ? null : resto.reviews,
+      reviews_number: resto.num_reviews,
     }))
     navigate('/selected-restaurant')
   }

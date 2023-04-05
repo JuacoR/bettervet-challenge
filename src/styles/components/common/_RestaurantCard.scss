@@ -1,10 +1,18 @@
+@use '../../mixins/' as m;
+@use '../../variables/' as v;
+
+
 .restaurant-card {
   width: 20%;
   height: 100px;
-  background-color: white;
+  background-color: v.$color_white;
   padding: 1rem;
   border-radius: 3px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  @include m.media-small {
+    width: 70%;
+    height: fit-content;
+  }
 }

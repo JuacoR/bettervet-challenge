@@ -1,0 +1,25 @@
+@use '../variables/breakpoints' as v;
+
+@mixin media-small() {
+  @media (max-width: v.$width-s) {
+    @content;
+  }
+}
+
+@mixin media-medium() {
+  @media (min-width: v.$width-m) {
+    @content;
+  }
+}
+
+@mixin media-large() {
+  @media (min-width: v.$width-dl) {
+    @content;
+  }
+}
+
+@mixin media-xlarge() {
+  @media (min-width: v.$width-dxl) {
+    @content;
+  }
+}

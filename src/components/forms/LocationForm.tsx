@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
-import GooglePlacesAutocomplete, { geocodeByPlaceId, getLatLng } from 'react-google-places-autocomplete'
+
+import { Button } from '../common/Button'
 import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
-import { addCoordinates } from '../../redux/states/coordinates'
 import { LocationInput } from '../../types'
-import { Button } from '../common/Button'
+import { addCoordinates } from '../../redux/states/coordinates'
+import GooglePlacesAutocomplete, { geocodeByPlaceId, getLatLng } from 'react-google-places-autocomplete'
 
 export const LocationForm = () => {
 
@@ -17,11 +18,9 @@ export const LocationForm = () => {
     try {
       const geocode = await geocodeByPlaceId(valueInput.value.place_id)
       let { lat, lng } = await getLatLng(geocode[0])
-      console.log(lat, lng)
       dispatch(addCoordinates({latitude: lat, longitude: lng}))
     } catch (error) {
       alert('Oh! something happened')
-      console.log(error)
     } finally {
       navigate('/restaurants')
     }

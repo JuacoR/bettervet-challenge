@@ -6,7 +6,9 @@ const initialState: Restaurant = {
   address: '',
   type_restaurant: '',
   image: '',
+  rating: '',
   reviews: [],
+  reviews_number: '',
 }
 
 export const selectedRestaurantSlice = createSlice({
